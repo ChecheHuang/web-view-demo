@@ -13,30 +13,30 @@
 </style>
 
 <br>
-    <div class="text" id="mytext">origin text</div>
-    <input type="text" id="myinput">
-    <button id="btn">send to android</button>
+<div class="text" id="mytext">origin text</div>
+<input type="text" id="myinput">
+<button id="btn">send to android</button>
 </br>
-    <a href="https://github.com/RobinTail/zod-sockets">跳轉</a>
+<a href="https://chechehuang.github.io/web-view-demo">跳轉</a>
 
 
 
-    <script language="javascript">
-        // 呼叫 Android 顯示快顯訊息
+<script language="javascript">
+    // 呼叫 Android 顯示快顯訊息
 
-        const myBtn = document.getElementById("btn");
-        myBtn.onclick = function () {
-            const text = document.getElementById("myinput").value
-            showAndroidToast(text);
-        }
-        function showAndroidToast(toast) {
-            JsTest.showToast(toast);
-        }
-        // 從 Android 傳進來的文字訊息
-        function calledFromAndroid(msg) {
-            document.getElementById("mytext").innerHTML = msg;
-        }
-    </script>
+    const myBtn = document.getElementById("btn");
+    myBtn.onclick = function () {
+        const text = document.getElementById("myinput").value
+        showAndroidToast(text);
+    }
+    function showAndroidToast(toast) {
+        JsTest.showToast(toast);
+    }
+    // 從 Android 傳進來的文字訊息
+    function calledFromAndroid(msg) {
+        document.getElementById("mytext").innerHTML = msg;
+    }
+</script>
 </body>
 
 </html>
