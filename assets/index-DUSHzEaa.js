@@ -9744,10 +9744,6 @@ const Input = reactExports.forwardRef(
   }
 );
 Input.displayName = "Input";
-function calledFromAndroid(msg) {
-  alert("calledFromAndroid");
-  document.getElementById("mytext").innerHTML = msg;
-}
 function Home() {
   const inputRef = reactExports.createRef();
   const [text, setText] = reactExports.useState("這是原本React裡面的字");
@@ -9762,7 +9758,6 @@ function Home() {
     JsTest.showToast(toast);
   }
   return /* @__PURE__ */ jsxRuntimeExports.jsx("div", { className: " w-full h-[100vh]  flex flex-col justify-center items-center ", children: /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "w-100 flex flex-col gap-2", children: [
-    /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { onClick: () => calledFromAndroid("給App用的方法"), children: "測試給App的方法" }),
     /* @__PURE__ */ jsxRuntimeExports.jsxs("div", { className: "flex gap-4", children: [
       /* @__PURE__ */ jsxRuntimeExports.jsx(Input, { className: "w-60 ", ref: inputRef }),
       /* @__PURE__ */ jsxRuntimeExports.jsx(Button, { onClick: sendDataToApp, children: "傳送資料給App" })
