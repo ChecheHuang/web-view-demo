@@ -2,6 +2,8 @@ import { Button } from "@/components/ui/button";
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert";
 import { Input } from "@/components/ui/input";
 import { createRef, useState } from "react";
+import { bankCode } from "./bankCode";
+import CommandDemo from "./components/CommandDemo";
 declare const JsTest: {
   showToast: (message: string) => void;
 };
@@ -42,6 +44,7 @@ export default function Home() {
           <AlertTitle>給App修改的字</AlertTitle>
           <AlertDescription id="mytext">{text}</AlertDescription>
         </Alert>
+        <CommandDemo />
       </div>
     </div>
   );
